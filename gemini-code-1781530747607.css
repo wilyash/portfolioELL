@@ -1,0 +1,273 @@
+/* DESIGN PHILOSOPHY ARCHITECTURE (AFTER JOOST GROOTENS) */
+
+@charset "UTF-8";
+
+/* --- System Reset & Base Elements --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Layout Structure --- */
+.meta-sidebar {
+    width: 280px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #cccccc;
+    padding: 40px 25px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    font-family: "SF Mono", Monaco, Consolas, monospace;
+    font-size: 11px;
+}
+
+.content-container {
+    margin-left: 280px;
+    max-width: 900px;
+    padding: 60px 80px;
+}
+
+/* --- Sidebar Blocks --- */
+.meta-block {
+    margin-bottom: 30px;
+}
+
+.meta-block .label {
+    display: block;
+    color: #888888;
+    margin-bottom: 5px;
+    letter-spacing: 0.05em;
+}
+
+.meta-block .value {
+    display: block;
+    color: #111111;
+    font-weight: bold;
+}
+
+.meta-block .value.institution {
+    font-size: 13px;
+    color: #0033cc; /* Signal Blue for Author Ident */
+}
+
+/* --- Header & Typography --- */
+.portfolio-header {
+    margin-bottom: 60px;
+    border-bottom: 2px solid #111111;
+    padding-bottom: 20px;
+}
+
+.index-code {
+    font-family: "SF Mono", monospace;
+    font-size: 11px;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.group-tag {
+    font-family: "SF Mono", monospace;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.document-section {
+    margin-bottom: 70px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #111111;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    font-family: "SF Mono", monospace;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 30px 0 15px 0;
+}
+
+h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 15px 0 10px 0;
+    font-family: "SF Mono", monospace;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- Grootes-Style Structured Tables --- */
+.grootens-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 13px;
+}
+
+.grootens-table th {
+    font-family: "SF Mono", monospace;
+    font-size: 11px;
+    color: #666666;
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid #111111;
+    font-weight: normal;
+}
+
+.grootens-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+.grootens-table tbody tr:last-child td {
+    border-bottom: 1px solid #111111;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+/* Data-Dense Table Formatting */
+.data-dense td {
+    padding: 8px 12px;
+    font-size: 12.5px;
+}
+
+.tech-label {
+    font-family: "SF Mono", monospace;
+    font-size: 11px;
+    color: #555555;
+    background-color: #f9f9f9;
+    width: 25%;
+    font-weight: bold;
+}
+
+/* --- Structural Highlights & Accents --- */
+.meta-inline {
+    background-color: #f5f5f5;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: "SF Mono", monospace;
+    margin-bottom: 20px;
+}
+
+.example-box {
+    display: block;
+    margin-top: 5px;
+    font-family: "SF Mono", monospace;
+    background-color: #f0f4ff;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-left: 2px solid #0033cc;
+}
+
+.form-syntax {
+    font-family: "SF Mono", monospace;
+    font-weight: bold;
+    background: #111111;
+    color: #ffffff;
+    padding: 6px 12px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.highlight-blue {
+    color: #0033cc;
+    font-weight: bold;
+}
+
+.highlight-red {
+    color: #cc0033;
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.neutral-code {
+    font-family: "SF Mono", monospace;
+    background: #eeeeee;
+    padding: 2px 4px;
+}
+
+.block-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: "SF Mono", monospace;
+}
+
+/* --- Task Lists & Workspaces --- */
+.workspace-box {
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fcfcfc;
+}
+
+.box-tag {
+    font-family: "SF Mono", monospace;
+    font-size: 10px;
+    color: #aaaaaa;
+    text-align: right;
+}
+
+.task-list {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* --- Responsiveness System --- */
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+    .meta-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 30px;
+        border-right: none;
+        border-bottom: 1px solid #cccccc;
+    }
+    .content-container {
+        margin-left: 0;
+        padding: 40px 20px;
+    }
+}
